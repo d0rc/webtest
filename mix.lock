@@ -1,0 +1,8 @@
+[ "continuum": {:git, "git://github.com/meh/continuum.git", "7845187fa814bdfa6938db7f3a2341b742b0aa61", []},
+  "cookiejar": {:git, "git://github.com/d0rc/elixir-cookiejar.git", "186bc93ae1beebf6dda21db80fd74f8cfc40a6db", []},
+  "hackney": {:git, "git://github.com/benoitc/hackney.git", "7f2a0b5996313d930277786e7ff5d538e9346547", [tag: "0.10.1"]},
+  "hackney_lib": {:git, "https://github.com/benoitc/hackney_lib.git", "eecdb481f1d38bfb194896bffdf9bdcdd967ae96", [tag: "0.2.2"]},
+  "httpoison": {:git, "git://github.com/edgurgel/httpoison.git", "d7aa9d172b13bb36b3f536f1e0f679458a589ff8", []},
+  "jsex": {:git, "git://github.com/talentdeficit/jsex.git", "1e89a76f770e14bbbd1b5bebfc05312a984f21a4", []},
+  "jsx": {:git, "git://github.com/talentdeficit/jsx.git", "e50af6e109cb03bd26acf715cbc77de746507d1d", [tag: "v1.4.3"]},
+  "mimetypes": {:git, "git://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", [ref: "master"]} ]
