@@ -63,7 +63,7 @@ defmodule Webtest.Assertions do
     created_at: {{2013, 10, 8}, {13, 57, 8}}
     expiry: {{2023, 10, 6}, {13, 57, 8}}
   """
-  def assert_cookie(result = HttpResult[], name, args //[]) do
+  def assert_cookie(result = HttpResult[], name, args \\ []) do
 
     cookie = Enum.find(result.cookies, fn(cookie) -> cookie.name == name end)
     assert(cookie, "Cookie '#{name}' is not present.")

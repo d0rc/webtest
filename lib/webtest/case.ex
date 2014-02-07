@@ -15,7 +15,7 @@ defmodule Webtest.Case do
         end
       end
   """
-  defmacro __using__(_opts // []) do
+  defmacro __using__(_opts \\ []) do
     quote do
       import Webtest.Case
       import Webtest.Assertions
@@ -47,7 +47,7 @@ defmodule Webtest.Case do
       ...code that will be executed with 10 retries and 1 second timeout after each failure..
     end
   """
-  defmacro with_retries(retries, interval // 0, contents) do
+  defmacro with_retries(retries, interval \\ 0, contents) do
     contents =
       case contents do
         [do: body] -> body

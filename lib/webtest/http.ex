@@ -28,7 +28,7 @@ defrecord Webtest.Http.Session, [cookies: nil, options: [], last_response: nil] 
   end
 
   #session.get
-  def get(url, headers // [], options // [], session) do
+  def get(url, headers \\ [], options \\ [], session) do
     result = Webtest.Http.get(url, session.headers(url) ++ headers, session.options ++ options)
     if result.cookies do
       session = session.update(cookies: add_cookies(session.cookies, result.cookies.get_cookies(url)))
@@ -37,7 +37,7 @@ defrecord Webtest.Http.Session, [cookies: nil, options: [], last_response: nil] 
   end
 
   # session.post
-  def post(url, body, headers // [], options // [], session) do
+  def post(url, body, headers \\ [], options \\ [], session) do
     result = Webtest.Http.post(url, body, session.headers(url) ++ headers, session.options ++ options)
     if result.cookies do
       session = session.update(cookies: add_cookies(session.cookies, result.cookies.get_cookies(url)))
@@ -68,19 +68,19 @@ defmodule Webtest.Http do
   """
   defrecord HttpResult, url: nil, cookies: nil, response: nil, time: 0
 
-  def get(url, headers // [], options // []),         do: request(:get, url, "", headers, options)
-  def put(url, body, headers // [], options // []),   do: request(:put, url, body, headers, options)
-  def head(url, headers // [], options // []),        do: request(:head, url, "", headers, options)
-  def post(url, body, headers // [], options // []),  do: request(:post, url, body, headers, options)
-  def patch(url, body, headers // [], options // []), do: request(:patch, url, body, headers, options)
-  def delete(url, headers // [], options // []),      do: request(:delete, url, "", headers, options)
-  def options(url, headers // [], options // []),     do: request(:options, url, "", headers, options)
+  def get(url, headers \\ [], options \\ []),         do: request(:get, url, "", headers, options)
+  def put(url, body, headers \\ [], options \\ []),   do: request(:put, url, body, headers, options)
+  def head(url, headers \\ [], options \\ []),        do: request(:head, url, "", headers, options)
+  def post(url, body, headers \\ [], options \\ []),  do: request(:post, url, body, headers, options)
+  def patch(url, body, headers \\ [], options \\ []), do: request(:patch, url, body, headers, options)
+  def delete(url, headers \\ [], options \\ []),      do: request(:delete, url, "", headers, options)
+  def options(url, headers \\ [], options \\ []),     do: request(:options, url, "", headers, options)
 
 
   @doc """
     Using gzip compression and parsing cookies by default.
   """
-  def request(method, url, body // "", headers // [], options // []) do
+  def request(method, url, body \\ "", headers \\ [], options \\ []) do
 
     if options[:debug] do
       IO.write "[DEBUG] Http.request.method:\t"
