@@ -16,9 +16,9 @@ defmodule Webtest.Mixfile do
 
   defp deps do
     [
-      { :jsex, github: "d0rc/jsex", branch: "fixes-for-new-elixir" },
+      { :jsex, github: "talentdeficit/jsex" },
       { :cookiejar, github: "d0rc/elixir-cookiejar" },
-      { :httpoison, github: "edgurgel/httpoison"}
+      { :httpoison, github: "d0rc/httpoison", branch: "fix-for-new-elixir"}
     ]
   end
 end
