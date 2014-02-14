@@ -1,5 +1,5 @@
 [ "continuum": {:git, "git://github.com/meh/continuum.git", "c4b695db3f2612c957391f0b497b9f0a81046efb", []},
-  "cookiejar": {:git, "git://github.com/d0rc/elixir-cookiejar.git", "59358744436067f4675c0ce2450a1cc16f5a5901", []},
+  "cookiejar": {:git, "git://github.com/d0rc/elixir-cookiejar.git", "5bbd3704eb797b2de484885098d6bb7e0da6c224", []},
   "hackney": {:git, "git://github.com/benoitc/hackney.git", "7f2a0b5996313d930277786e7ff5d538e9346547", [tag: "0.10.1"]},
   "hackney_lib": {:git, "https://github.com/benoitc/hackney_lib.git", "eecdb481f1d38bfb194896bffdf9bdcdd967ae96", [tag: "0.2.2"]},
   "httpoison": {:git, "git://github.com/edgurgel/httpoison.git", "aacfb553a446bd2b67d88428481378e8a3c4f41e", []},
