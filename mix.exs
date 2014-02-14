@@ -18,7 +18,7 @@ defmodule Webtest.Mixfile do
     [
       { :jsex, github: "talentdeficit/jsex" },
       { :cookiejar, github: "d0rc/elixir-cookiejar" },
-      { :httpoison, github: "d0rc/httpoison", branch: "fix-for-new-elixir"}
+      { :httpoison, github: "edgurgel/httpoison"}
     ]
   end
 end

@@ -14,7 +14,7 @@ defmodule Webtest.Test do
     |> assert_http(http_code: 301, location: "https://github.com/")
 
     Webtest.Http.get("https://github.com", @useragent_headers)
-    |> assert_http([http_code: 200, body_match: %r/Sign up for GitHub/])
+    |> assert_http([http_code: 200, body_match: ~r/Sign up for GitHub/])
   end
 
   test "Json parsing" do

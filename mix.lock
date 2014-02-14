@@ -1,8 +1,8 @@
-[ "continuum": {:git, "git://github.com/meh/continuum.git", "057353cc4fc59c5257036e32c4ceea44fdc7a8ec", []},
+[ "continuum": {:git, "git://github.com/meh/continuum.git", "c4b695db3f2612c957391f0b497b9f0a81046efb", []},
   "cookiejar": {:git, "git://github.com/d0rc/elixir-cookiejar.git", "59358744436067f4675c0ce2450a1cc16f5a5901", []},
   "hackney": {:git, "git://github.com/benoitc/hackney.git", "7f2a0b5996313d930277786e7ff5d538e9346547", [tag: "0.10.1"]},
   "hackney_lib": {:git, "https://github.com/benoitc/hackney_lib.git", "eecdb481f1d38bfb194896bffdf9bdcdd967ae96", [tag: "0.2.2"]},
-  "httpoison": {:git, "git://github.com/d0rc/httpoison.git", "b153f4ae8857418e94909f3e1450505be0ca5279", [branch: "fix-for-new-elixir"]},
+  "httpoison": {:git, "git://github.com/edgurgel/httpoison.git", "aacfb553a446bd2b67d88428481378e8a3c4f41e", []},
   "jsex": {:git, "git://github.com/talentdeficit/jsex.git", "3db1d520e00fb28c3eee4e5b30645d5878037c38", []},
   "jsx": {:git, "git://github.com/talentdeficit/jsx.git", "e50af6e109cb03bd26acf715cbc77de746507d1d", [tag: "v1.4.3"]},
   "mimetypes": {:git, "git://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", [ref: "master"]} ]
