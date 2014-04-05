@@ -22,7 +22,7 @@ defmodule Webtest.Assertions do
           assertion: "be equal (==) to"
         Keyword.delete(args, :location)
 
-      is_regex(args[:body_match]) ->
+      Regex.regex?(args[:body_match]) ->
         match = args[:body_match]
         actual_body = result.response.body
         assert actual_body =~ match, actual_body, match,
