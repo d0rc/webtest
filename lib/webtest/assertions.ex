@@ -9,25 +9,19 @@ defmodule Webtest.Assertions do
       is_integer(args[:http_code]) ->
         expected_code = args[:http_code]
         actual_code = result.response.status_code
-        assert actual_code == expected_code, expected_code, actual_code,
-          prelude: "Expecting HTTP response code",
-          assertion: "be equal (==) to"
+        assert actual_code == expected_code, expected_code, actual_code, " (expected http_code to equal to #{expected_code}) "
         Keyword.delete(args, :http_code)
 
       is_binary(args[:location]) ->
         expected_location = args[:location]
-        actual_location  = result.response.headers["Location"]
-        assert actual_location == expected_location, expected_location, actual_location,
-          prelude: "Expecting HTTP location",
-          assertion: "be equal (==) to"
+        actual_location  = Enum.into(result.response.headers, %{})["Location"]
+        assert actual_location == expected_location, expected_location, actual_location, " (expected http_location (#{inspect actual_location}) to be equal to #{inspect expected_location}) "
         Keyword.delete(args, :location)
 
       Regex.regex?(args[:body_match]) ->
         match = args[:body_match]
         actual_body = result.response.body
-        assert actual_body =~ match, actual_body, match,
-          prelude: "Expecting HTTP body",
-          assertion: "match (=~) to"
+        assert actual_body =~ match, actual_body, match, " (expected http_body to match #{inspect match}) "
         Keyword.delete(args, :body_match)
 
       true -> result
@@ -39,6 +33,7 @@ defmodule Webtest.Assertions do
     access_fun = args[:access_fun]
     value = args[:value]
     {:ok, json} = JSEX.decode(result.response.body)
+    json = Enum.into(json, %{})
 
     #TODO: write better assertion error
     assert(access_fun.(json) == value)
@@ -72,9 +67,7 @@ defmodule Webtest.Assertions do
 
     Enum.each args, fn({key, expected}) ->
       actual = Keyword.get(cookie, key)
-      assert(expected == actual, expected, actual,
-        prelude: "Expecting cookie '#{name}' param '#{key}'",
-        assertion: "be equal (==) to")
+      assert(expected == actual, expected, actual, " (expected cookie #{name} to be equal to #{expected}) ")
     end
     result
   end

@@ -108,7 +108,7 @@ defmodule Webtest.Http do
       IO.inspect response.headers
     end
 
-    response = case response.headers["Content-Encoding"] do
+    response = case Enum.into(response.headers, %{})["Content-Encoding"] do
       "gzip" -> response.update body: :zlib.gunzip response.body
       nil    -> response
     end

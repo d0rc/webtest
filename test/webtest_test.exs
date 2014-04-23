@@ -10,11 +10,11 @@ defmodule Webtest.Test do
   end
 
   test "multistep request" do
-    Webtest.Http.get("http://www.github.com", @useragent_headers)
+    Webtest.Http.get("http://github.com", @useragent_headers)
     |> assert_http(http_code: 301, location: "https://github.com/")
 
-    Webtest.Http.get("https://github.com", @useragent_headers)
-    |> assert_http([http_code: 200, body_match: ~r/Sign up for GitHub/])
+    Webtest.Http.get("https://api.github.com", @useragent_headers)
+    |> assert_http([http_code: 200, body_match: ~r/current_user_url/])
   end
 
   test "Json parsing" do
