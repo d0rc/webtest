@@ -1,9 +1,8 @@
-%{"continuum": {:git, "git://github.com/meh/continuum.git", "bd9e467fb37f68bd83211b3c5cae85700ebd3cf6", []},
-  "cookiejar": {:git, "git://github.com/d0rc/elixir-cookiejar.git", "4a9ad21cf8fe5220887a02e7059cb52ff67de83c", []},
+%{"continuum": {:git, "git://github.com/meh/continuum.git", "302470c32999ff3b1c374cce8d99a46b043a83fe", []},
+  "cookiejar": {:git, "git://github.com/d0rc/elixir-cookiejar.git", "b4e89c0790c49d1144567d26558e93cfd6218fd6", []},
   "hackney": {:git, "git://github.com/benoitc/hackney.git", "e18bdd2f68840c8fddd77875b06079087290e5cc", []},
-  "hackney_lib": {:git, "git://github.com/benoitc/hackney_lib.git", "48a5a3fc64892c95e4e3efdd464f26ca5683d2f9", []},
+  "hackney_lib": {:git, "git://github.com/benoitc/hackney_lib.git", "8050fe58fa6e6321fd38a255d0b61f7200f8648d", []},
   "httpoison": {:git, "git://github.com/d0rc/httpoison.git", "ea15882cdd52f121d9a4d3fbbc0139cd5b9218a4", []},
   "idna": {:git, "git://github.com/benoitc/erlang-idna.git", "21aa158b7f36bf2a000f12fe40d7f21eece9cf65", [tag: "hackney-0.11.2"]},
-  "jsex": {:git, "git://github.com/talentdeficit/jsex.git", "3837aba229a47d959d7826f2f49b001cc911883d", []},
-  "jsx": {:git, "git://github.com/talentdeficit/jsx.git", "8e150dafb9787dd6b608e912c1b52575b06fe7f8", [tag: "v2.0"]},
-  "mimetypes": {:git, "git://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", [ref: "master"]}}
+  "jsex": {:git, "git://github.com/talentdeficit/jsex.git", "03ad4ff0967331afd01464857d41e5e497ed198c", []},
+  "jsx": {:git, "git://github.com/talentdeficit/jsx.git", "507fa4c41db33c81e925ab53f4d789d234aaff2f", [tag: "v2.0.1"]}}
